@@ -2,50 +2,62 @@
 
 ## Overview
 
-This project is a simple trading bot developed in Python for Binance Futures Testnet. It allows users to place MARKET and LIMIT orders through a command-line interface while maintaining proper validation, logging, and error handling.
+This project is a Python-based trading bot developed for Binance Futures Testnet. It supports placing MARKET and LIMIT orders through a command-line interface. The bot includes input validation, logging, and error handling to ensure smooth execution of orders.
 
-The project was created as part of the PrimetradeAI Python Developer application task.
+The project was built as part of a Python Developer assignment and focuses on creating a simple but structured trading application.
 
 ## Features
 
-- Place MARKET orders
-- Place LIMIT orders
-- Supports BUY and SELL orders
-- Command-line interface using argparse
-- Input validation
-- Logging of requests and responses
-- Error handling for invalid inputs and API issues
+* Place MARKET orders
+* Place LIMIT orders
+* Supports BUY and SELL operations
+* Command-line interface using argparse
+* Input validation
+* Logging of order requests and responses
+* Error handling for invalid inputs and API-related issues
 
 ## Project Structure
 
 trading_bot/
-│
+
 ├── bot/
+
 │   ├── client.py
+
 │   ├── orders.py
+
 │   ├── validators.py
+
 │   └── logging_config.py
+
 │
+
 ├── logs/
+
 ├── cli.py
+
 ├── requirements.txt
+
 ├── README.md
+
 └── .env.example
 
 ## Installation
 
 1. Clone the repository:
 
-git clone <repository-url>
-cd trading_bot
+git clone https://github.com/tiwarikanjali-18/binance-futures-trading-bot.git
 
-2. Install dependencies:
+cd binance-futures-trading-bot
+
+2. Install the required packages:
 
 pip install -r requirements.txt
 
-3. Create a .env file and add your Binance Futures Testnet API credentials:
+3. Create a `.env` file and add your Binance Futures Testnet credentials:
 
 API_KEY=your_api_key
+
 API_SECRET=your_api_secret
 
 ## Usage
@@ -60,29 +72,32 @@ python cli.py --symbol BTCUSDT --side SELL --type LIMIT --quantity 0.001 --price
 
 ## Logging
 
-All order requests, responses, and errors are recorded in:
+All order requests, responses, and errors are stored in:
 
 logs/trading.log
 
 ## Assumptions
 
-- Binance Futures Testnet account is active.
-- API credentials are valid.
-- Quantity and price values are provided according to Binance Futures requirements.
+* Binance Futures Testnet account is active.
+* API credentials are valid.
+* Symbol, quantity, and price values follow Binance Futures requirements.
 
-## Sample Results
+## Testing
 
-Successfully tested:
-- MARKET BUY order on BTCUSDT
-- LIMIT SELL order on BTCUSDT
-- Request and response logging
+The following scenarios were tested successfully:
+
+* MARKET BUY order on BTCUSDT
+* LIMIT SELL order on BTCUSDT
+* Logging of order requests and responses
+* Input validation and exception handling
 
 ## Technologies Used
 
-- Python 3
-- python-binance
-- python-dotenv
-- Binance Futures Testnet API
+* Python 3
+* python-binance
+* python-dotenv
+* Binance Futures Testnet API
 
 ## Author
+
 Anjali Tiwari
